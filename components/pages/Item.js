@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, ScrollView, SectionList, FlatList, ListI
 // Common components
 import { Styles } from '../common/Styles'
 
-// import Slider from '../common/Slider'
+import Slider from '../common/Slider'
 
 // Services
 import { getNewById } from '../../services/NewsService'
@@ -56,8 +56,8 @@ export default class Item extends React.Component {
 
                         {
                             news.img ? 
-                            // <Slider _images={news.img} />
-                            news.img.map((img, k) => <Image key={k} source={{uri: img}} style={imageStyles} />)
+                            <Slider _images={news.img} />
+                            // news.img.map((img, k) => <Image key={k} source={{uri: img}} style={imageStyles} />)
                             : null
                         }
                         <Text style={descTextStyles}>{news.desc}</Text>
