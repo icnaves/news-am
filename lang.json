@@ -1,0 +1,40 @@
+{
+	"arm": {
+		"ag": {
+			"title" : "",
+			"icon" : "",
+		},
+		"all": {
+			"title" : "",
+			"icon" : "",
+		},
+	},
+
+	"rus": {
+		"ag": {
+			"title" : "Геноцид Армян",
+			"icon" : "",
+		},
+		"all": {
+			"title" : "Все категории",
+			"icon" : "",
+		},
+	},
+
+	"eng": {
+		"ag": {
+			"title" : "Armenian Genocide",
+			"icon" : "",
+		},
+		"all": {
+			"title" : "All categories",
+			"icon" : "",
+		},
+	},
+	"styles" : {
+		"ag": {
+			"backgroundColor": "#552466",
+			"color": "#f1f1f1"
+		}
+	}
+}

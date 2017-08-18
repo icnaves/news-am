@@ -1,9 +1,12 @@
-export const getNews = () => fetch('http://shavomusic.ru/api_news_1/')
+import Conf from '../config'
+import { getLang } from '../store'
+
+export const getNews = () => fetch(Conf.baseUrl + '/?lang=' + getLang())
     .then(data => {
         return data.json()
     })
 
-export const getNewById = id => fetch('http://shavomusic.ru/api_news_1/?id=' + id)
+export const getNewById = id => fetch(Conf.baseUrl + '/?lang=' + getLang() + '&id=' + id)
     .then(data => {
         return data.json()
     })

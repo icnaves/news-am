@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, ScrollView, SectionList, FlatList, ListItem, ActivityIndicator } from 'react-native'
+import Modal from '../common/Modal'
 
 // Components
-import Header from '../common/Header'
+import LeftMenu from '../common/LeftMenu'
 import ItemsList from '../common/ItemsList'
 
 // Services
@@ -18,7 +19,7 @@ export default class Home extends React.Component {
             news: [],
             isLoading: true,
             refreshing: false
-        };
+        }
     }
     componentDidMount() {
         getNews().then(data => this.setState({ news: data, isLoading: false }))
@@ -40,14 +41,16 @@ export default class Home extends React.Component {
             )
         }
         else {
+            const content = <View style={{flex: 1, backgroundColor: '#ffffff'}}>
+                        <ItemsList
+                        onPress={this._onPress.bind(this)}
+                        refreshing={this.state.refreshing}
+                        _onRefresh={this._onRefresh.bind(this)}
+                        items={this.state.news} />
+                        <Modal />
+                    </View>
             return (
-                <View style={{flex: 1, backgroundColor: '#ffffff'}}>
-                    <ItemsList
-                    onPress={this._onPress.bind(this)}
-                    refreshing={this.state.refreshing}
-                    _onRefresh={this._onRefresh.bind(this)}
-                    items={this.state.news} />
-                </View>
+                <LeftMenu content={content} />
             );
         }
     }

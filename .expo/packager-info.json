@@ -1,8 +1,8 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 6812,
+  "expoServerNgrokUrl": "https://di-t6u.sevanci.news-am.exp.direct",
+  "packagerNgrokUrl": "https://packager.di-t6u.sevanci.news-am.exp.direct",
+  "ngrokPid": 6846
 }
